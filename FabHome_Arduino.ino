@@ -44,7 +44,7 @@ void setup() {
     pinMode(LED_NET_PIN, OUTPUT);
 
     //Включаем светодиод индикации питания
-    digitalWrite(LED_PWR_PIN, HI);
+    digitalWrite(LED_PWR_PIN, HIGH);
 }
 
 //Основной цикл программы

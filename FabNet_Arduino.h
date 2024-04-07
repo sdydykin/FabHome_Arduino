@@ -12,6 +12,9 @@ class FabNet_Arduino {
 
     //Последователный порт для доступа к сети FabNet
     SoftwareSerial& _serial;
+
+    //Идентификатор контроллера в сети FabNet
+    unsigned int _ctrl_dev_id;
   public:
     //Конструктор класса
     FabNet_Arduino(SoftwareSerial& serial, unsigned char re_pin, unsigned char de_pin);
@@ -30,6 +33,9 @@ class FabNet_Arduino {
 
     //Запись логической переменной
     bool write_bool_var(unsigned int dev_id, unsigned char var_id, bool var_val);
+
+    //Задание идентификатора контроллера в сети FabNet
+    void set_ctrl_id(unsigned int ctrl_dev_id);
 };
 
 #endif

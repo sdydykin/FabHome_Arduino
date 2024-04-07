@@ -45,3 +45,10 @@ bool FabNet_Arduino::read_bool_var(unsigned int dev_id, unsigned char var_id, bo
 bool FabNet_Arduino::write_bool_var(unsigned int dev_id, unsigned char var_id, bool var_val) {
   return true;
 }
+
+//Задание идентификатора контроллера в сети FabNet
+void FabNet_Arduino::set_ctrl_id(unsigned int ctrl_dev_id)
+{
+  //Сохраняем идентификатор контроллера в сети FabNet
+  _ctrl_dev_id = ctrl_dev_id;
+}
